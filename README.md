@@ -1,98 +1,117 @@
-# DailyQuotes — a Random Code Generator
+# Quote Generator
 
-**DailyQuotes** is a full-stack web app that serves a fresh quote each time you click the button. You can even contribute your own quotes. Built using **React** for the frontend and **Django + Django REST Framework** for the backend.
+Quote Generator is a full-stack web application that allows users to discover random inspirational quotes and add their own. The application features a React frontend and a Django REST Framework backend, making it a robust and modern solution for managing and serving quotes.
 
 ---
 
 ## Features
 
-- Fetch a random quote with a single click
-- Add your own quotes to the system
-- Simple, elegant, and responsive UI
-- Backend API with Django REST Framework
-- CORS configured for frontend-backend integration
+- Fetch and display a random quote
+- Add new custom quotes
+- Responsive and clean user interface
+- RESTful API with Django REST Framework
+- Seamless integration between frontend and backend
 
 ---
 
-## Tech Stack
+## Technology Stack
 
-### Frontend
-- React
-- CSS (custom)
-- Axios (for API calls)
+**Frontend:**
+- React (with Vite)
+- Axios for API requests
+- Custom CSS
 
-### Backend
+**Backend:**
 - Django
 - Django REST Framework
-- SQLite3
+- SQLite (default; can be swapped for other databases)
 
-🚀 How to Run This Project Locally
-🔧 Backend (Django)
-Clone the repo
+---
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/daily-quote-generator.git
-cd daily-quote-generator/backend
-Create a virtual environment
+## Getting Started
 
-bash
-Copy
-Edit
-python -m venv .venv
-source .venv/bin/activate  # on Windows: .venv\Scripts\activate
-Install dependencies
+### Backend Setup
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Run migrations
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/maithilimukherjee/Quote-Generator.git
+   cd Quote-Generator/backend
+   ```
 
-bash
-Copy
-Edit
-python manage.py migrate
-(Optional) Add some quotes via the admin panel
+2. **Create and activate a virtual environment:**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate    # On Windows: .venv\Scripts\activate
+   ```
 
-bash
-Copy
-Edit
-python manage.py createsuperuser
-python manage.py runserver
-Access: http://localhost:8000/admin
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-💻 Frontend (React)
-Open a new terminal window and go to the frontend folder
+4. **Apply migrations:**
+   ```bash
+   python manage.py migrate
+   ```
 
-bash
-Copy
-Edit
-cd ../frontend
-Install dependencies
+5. **(Optional) Create an admin user:**
+   ```bash
+   python manage.py createsuperuser
+   ```
 
-bash
-Copy
-Edit
-npm install
-Start the dev server
+6. **Run the backend server:**
+   ```bash
+   python manage.py runserver
+   ```
 
-bash
-Copy
-Edit
-npm run dev
-App runs at http://localhost:5173
+   The API will be available at `http://localhost:8000/`.
 
-🛠 API Endpoint Example
-To get all quotes:
+---
 
-http
-Copy
-Edit
-GET http://localhost:8000/api/quotes/
-🤝 Note
-Collabs are welcome! Also, deployment kept crashing 🫠
-If you spot the issue, please do help — PRs appreciated 💙
+### Frontend Setup
+
+1. **Open a new terminal and navigate to the frontend directory:**
+   ```bash
+   cd ../frontend
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+   The app will be available at `http://localhost:5173/`.
+
+---
+
+## API Endpoints
+
+- **Get all quotes:**  
+  `GET /api/quotes/`
+- **Add a new quote:**  
+  `POST /api/quotes/` (provide `text` and `author` in the request body)
+
+You can explore more endpoints or test them via Django admin or tools like Postman.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request. If you find bugs or have suggestions, open an issue for discussion.
+
+---
+
+## Troubleshooting
+
+- **CORS Errors:** Ensure the backend is running on the correct port and CORS headers are properly set.
+- **Database Errors:** Make sure migrations have been applied before starting the backend server.
+- **API Connection Issues:** Verify both frontend and backend servers are running and the endpoints are correctly configured in the frontend code.
+
+For further assistance, please create an issue in the repository.
 
 ---
