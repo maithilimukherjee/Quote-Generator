@@ -1,28 +1,30 @@
 import random
-from django.shortcuts import render
+from django.http import HttpResponse
 from rest_framework import viewsets
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from .models import Quote
 from .serializers import QuoteSerializer
-from django.http import HttpResponse, JsonResponse
 
-# DRF viewset for full CRUD access
+# viewset for CRUD on /api/quotes/
 class QuoteViewSet(viewsets.ModelViewSet):
     queryset = Quote.objects.all()
     serializer_class = QuoteSerializer
 
-# basic home view
+# simple homepage response
 def home(request):
     return HttpResponse("Welcome to the Daily Quotes API!")
 
-# NEW: API view for random quote
+# DRF API view to return one random quote
+@api_view(['GET'])
 def get_random_quote(request):
     quotes = Quote.objects.all()
-    if quotes:
+    if quotes.exists():
         quote = random.choice(quotes)
-        return JsonResponse({
+        return Response({
             "id": quote.id,
             "text": quote.text,
             "author": quote.author
         })
     else:
-        return JsonResponse({"error": "No quotes found"}, status=404)
+        return Response({"error": "No quotes found"}, status=404)
