@@ -1,6 +1,6 @@
-# 🌞 DailyQuotes — Inspire Yourself, One Click at a Time
+# DailyQuotes — a Random Code Generator
 
-**DailyQuotes** is a full-stack web app that serves a fresh dose of inspiration (or sarcasm 😏) each time you click the button. You can even contribute your own quotes. Built using **React** for the frontend and **Django + Django REST Framework** for the backend.
+**DailyQuotes** is a full-stack web app that serves a fresh quote each time you click the button. You can even contribute your own quotes. Built using **React** for the frontend and **Django + Django REST Framework** for the backend.
 
 ---
 
