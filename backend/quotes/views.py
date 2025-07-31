@@ -22,10 +22,6 @@ def get_random_quote(request):
     if quotes.exists():
         quote = random.choice(quotes)
         serializer = QuoteSerializer(quote)
-        return Response({
-            "id": quote.id,
-            "text": quote.text,
-            "author": quote.author
-        })
+        return Response(serializer.data)
     else:
         return Response({"error": "No quotes found"}, status=404)
