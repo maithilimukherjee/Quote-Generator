@@ -1,0 +1,22 @@
+button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+p{
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+button:hover {
+    background-color: #001101;
+     /* Darker green on hover */
+     color: antiquewhite;
+}

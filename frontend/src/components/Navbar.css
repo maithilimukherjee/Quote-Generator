@@ -1,0 +1,12 @@
+.navbar{
+    text-align: center; 
+}
+.navbar-text {
+    font-size: 1.2rem;
+    color: #035808;
+}
+.navbar :hover {
+    cursor: pointer;
+    scale: 1.1;
+    color: #035808;
+}
