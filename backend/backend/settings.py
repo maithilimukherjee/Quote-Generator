@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-62st=h!sm$&h_5d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['quote-generator-cs01.onrender.com', 'localhost', '127.0.0.1', 'quote-generator-nine-self.vercel.app']
 
 
 # Application definition
