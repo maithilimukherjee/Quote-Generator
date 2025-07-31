@@ -21,6 +21,7 @@ def get_random_quote(request):
     quotes = Quote.objects.all()
     if quotes.exists():
         quote = random.choice(quotes)
+        serializer = QuoteSerializer(quote)
         return Response({
             "id": quote.id,
             "text": quote.text,
