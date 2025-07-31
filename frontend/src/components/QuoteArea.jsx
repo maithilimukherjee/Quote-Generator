@@ -8,7 +8,7 @@ const QuoteArea = () => {
 
   const fetchQuote = async () => {
     try {
-      const res = await axios.get('https://quote-generator-cs01.onrender.com/api/random/')
+      const res = await axios.get('http://localhost:8000/api/random/')
       const data = res.data
       setQuote(`"${data.text}" — ${data.author}`)
     } catch (err) {
