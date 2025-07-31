@@ -103,6 +103,7 @@ You can explore more endpoints or test them via Django admin or tools like Postm
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request. If you find bugs or have suggestions, open an issue for discussion.
+PS: Deployment kept crashing so if you are able to fix it, THANK YOU SO MUCH.
 
 ---
 
